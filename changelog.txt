@@ -1,4 +1,33 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 12.05.2025
+  Bugfixes:
+    - Removed remnant debug print.
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 12.05.2025
+  Features:
+    - Valves now use new native Factorio prototypes.
+    - IMPORTANT: Old blueprints containing valves will be supported until 2.1. Please update any blueprints containing valves!
+    - Valve behaviour is now more consistent with expected behaviour.
+  Changes:
+    - Custom threshold settings are now startup settings. Old settings will be lost.
+  Compatibility:
+    - [PyIndustry] Added a setting to disable the automatic migration of PyIndustry valves.
+---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: 22.03.2025
+  Bugfixes:
+    - Fixed that Top Up valve ghosts would not retain threshold settings.
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 20.01.2025
+  Features:
+    - Added a startup setting for the overflow, top-up and one-way valves' pump speed when it's open.
+  Compatibility:
+    - Recipe and required technology is now compatible with more mods.
+    - [PyIndustry] Valve recipe and required technology is now based on deprecated Py valves instead of pump.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 02.12.2024
   Compatibility:

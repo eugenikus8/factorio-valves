@@ -1,9 +1,10 @@
 -- This migration turns all the old 1.1 py-valves into a configurable valve
 -- with the correct circuit conditions
 
-if not script.active_mods["pyindustry"] then return end
-
 local util = require("util")
+
+if not script.active_mods["pyindustry"] then return end
+if settings.startup["valves-disable-py-migration"].value then return end
 
 local replace_behaviour = {
     ["py-overflow-valve"]   = { name = "valves-overflow" },
@@ -23,7 +24,7 @@ for _, surface in pairs(game.surfaces) do
                 direction = util.oppositedirection(direction)
             end
 
-            local valve = surface.create_entity{
+            surface.create_entity{
                 name = config.name,
                 position = position,
                 force = force,
